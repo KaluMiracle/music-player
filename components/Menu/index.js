@@ -6,8 +6,14 @@ const Menu = ({
     currentIndex,
     setShowPlaylist,
     playlistArray,
+    setShowMenu,
 }) =>{
 
+    const handleShowPlaylist = () => {
+        setShowMenu(false)
+        setShowPlaylist(true)
+
+    }
     
 
     return (
@@ -26,11 +32,11 @@ const Menu = ({
                 </p>
                 <p className={styles.menu_item + ' ' + styles.dots}>...</p>
 
-                <div className={styles.menu_item} onClick={()=>setShowPlaylist(true)}>
+                <div className={styles.menu_item}>
                     Add to playlist
                 </div>
 
-                <div className={styles.menu_item}>
+                <div className={styles.menu_item} onClick={handleShowPlaylist}>
                     Show album
                 </div>
 
