@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 
 import styles from '../../styles/index.module.scss'
 import Image from 'next/image'
@@ -89,12 +90,12 @@ const AudioPlayer = ({
       <audio className={currentIndex} ref={audioPlayer} src={currentItem.src} preload="metadata"/>
         <div className={styles.slider } >
 
-            <img className={styles.image + ' ' + styles.first_image } src={playlistArray[previousIndex].image.src} onClick={()=>setCurrentIndex(previousIndex)} />
+            <img className={styles.image + ' ' + styles.first_image } src={playlistArray[previousIndex].image.src} alt='' onClick={()=>setCurrentIndex(previousIndex)} />
             <div className={styles.current } >
-                <img className={styles.image + ' ' + styles.large  + classname} src={playlistArray[currentIndex].image.src}/>
+                <img className={styles.image + ' ' + styles.large  + classname} src={playlistArray[currentIndex].image.src} alt=''/>
                 <div className={styles.circle}></div>
             </div>
-            <img className={styles.image + ' ' + styles.last_image } src={playlistArray[nextIndex].image.src}  onClick={()=>setCurrentIndex(nextIndex)}/>
+            <img className={styles.image + ' ' + styles.last_image } src={playlistArray[nextIndex].image.src}  onClick={()=>setCurrentIndex(nextIndex)} alt=''/>
             
         </div>
 

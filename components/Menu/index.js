@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/index.module.scss'
 
 const Menu = ({
@@ -12,7 +13,7 @@ const Menu = ({
     return (
         <div className={styles.menu + menuClassname} >
             <div className={styles.slider}>
-                <img className={styles.image + ' ' + styles.large + ' animate__animated animate__pulse '} src={playlistArray[currentIndex].image.src}/>
+                <img alt='' className={styles.image + ' ' + styles.large + ' animate__animated animate__pulse '} src={playlistArray[currentIndex].image.src}/>
       
             </div>
             <p className={styles.title}>
