@@ -85,15 +85,13 @@ const App = () => {
           
         </div>
 
-        {
-          showMenu? 
-            <Menu {...states}/> : <AudioPlayer {...states}/> 
-
-          
-        }
+        <AudioPlayer {...states}/> 
+        
+        
 
         <div style={{
             width: '100%',
+            background: 'transparent'
           }}>
 
             {
@@ -132,6 +130,12 @@ const App = () => {
 
             </div>
           </div>
+
+        {
+          showMenu? 
+            <Menu {...states}/> : null
+        }
+          
 
         {
           showPlaylist? 

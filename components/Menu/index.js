@@ -11,29 +11,32 @@ const Menu = ({
     
 
     return (
-        <div className={styles.menu + menuClassname} >
-            <div className={styles.slider}>
-                <img alt='' className={styles.image + ' ' + styles.large + ' animate__animated animate__pulse '} src={playlistArray[currentIndex].image.src}/>
-      
-            </div>
-            <p className={styles.title}>
-                {playlistArray[currentIndex].title}
-            </p>
-            <p  className={styles.grey_text}>
-                {playlistArray[currentIndex].artist}
-            </p>
-            <p className={styles.menu_item + ' ' + styles.dots}>...</p>
+        <div className={styles.menu_container}>
 
-            <div className={styles.menu_item} onClick={()=>setShowPlaylist(true)}>
-                Add to playlist
-            </div>
+            <div className={styles.menu + menuClassname} >
+                <div className={styles.slider}>
+                    <img alt='' className={styles.image + ' ' + styles.large + ' animate__animated animate__pulse '} src={playlistArray[currentIndex].image.src}/>
+        
+                </div>
+                <p className={styles.title}>
+                    {playlistArray[currentIndex].title}
+                </p>
+                <p  className={styles.grey_text}>
+                    {playlistArray[currentIndex].artist}
+                </p>
+                <p className={styles.menu_item + ' ' + styles.dots}>...</p>
 
-            <div className={styles.menu_item}>
-                Show album
-            </div>
+                <div className={styles.menu_item} onClick={()=>setShowPlaylist(true)}>
+                    Add to playlist
+                </div>
 
-            <div className={styles.menu_item}>
-                Share with friends
+                <div className={styles.menu_item}>
+                    Show album
+                </div>
+
+                <div className={styles.menu_item}>
+                    Share with friends
+                </div>
             </div>
         </div>
     )
