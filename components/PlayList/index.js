@@ -48,7 +48,7 @@ const Playlist = ({
         <div className={styles.playlist + classname} >
             <div className={styles.header_container}>
                 <div className={styles.header}>
-                    <div className={styles.ico} onClick={()=>setShowPlaylist(!showPlaylist)} >
+                    <div className={styles.ico} onClick={handleHide} >
                         <div><Image src={backIco}layout='fill'  alt=''/></div>
                     </div>
 

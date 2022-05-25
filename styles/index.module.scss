@@ -456,6 +456,7 @@ $text-color-dark: #1B1B1B;
     top: 0;
     background-color: white;
     @include flex-column();
+    z-index: 3;
 
     .header_container{
         width: 100%;
